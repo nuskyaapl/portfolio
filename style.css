@@ -57,6 +57,9 @@ html{
 /* ----- GLOBAL BUTTON DESIGN ----- */
 .btn{
     font-weight: 500;
+    text-decoration: none;
+    color:var(--text-color-second);
+    font-size: 13px;
     padding: 12px 20px;
     background: #ffa500;
     border: none;
@@ -66,6 +69,7 @@ html{
 }
 .btn>i{
     margin-left: 10px;
+
 }
 .btn:hover{
     background: var(--second-color);
@@ -161,11 +165,12 @@ nav{
 
 
 .mode{
+    
  display: flex;
  align-items: center;
 }
 .moon-sun{
- position: relative;
+ position: absolute;
  display: flex;
  align-items: center;
  justify-content: center;
@@ -212,7 +217,7 @@ body.dark #moon{
     background: var(--third-color);
     color: var(--color-white);
     padding: 3px 8px;
-    font-size: 12px;
+    font-size: 18px;
     border-radius: 5px;
 }
 .featured-name{
@@ -264,30 +269,39 @@ body.dark #moon{
 /* ----- FEATURED IMAGE BOX ----- */
 .featured-image{
     display: flex;
-    justify-content: right;
-    align-content: center;
-    min-height: 80vh;
+    justify-content: center; /* Adjusted to center the image horizontally */
+    align-items: center; /* Adjusted to center the image vertically */
+    min-height: 50px;
     width: 50%;
 }
+
 .image{
-    margin: auto 0;
+    position: relative;
+    margin: 50px auto 0;
     width: 480px;
-    height: 480px;
-    border-radius: 85% 85% 85% 85%;
+    height: 550px;
+    border: 10px solid #fff; /* Add a border to mimic the Polaroid frame */
+    border-radius: 20px; /* Adjust the border-radius to create a more realistic frame */
     overflow: hidden;
-    
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+    transform: rotate(-3deg); /* Rotate the image container slightly for a Polaroid effect */
 }
+
 .image img{
-    width: 480px;
-    height: 480px;
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%; /* Ensure the image fills the container */
     object-fit: cover;
+    transform: rotate(3deg); /* Counter-rotate the image to cancel out the container's rotation */
 }
+
+/* Optional: Add animation to the Polaroid effect */
 @keyframes imgFloat {
     50%{
         transform: translateY(10px);
         border-radius: 45% 55% 45% 55%;
     }
 }
+
 .scroll-btn{
    position: absolute;
    bottom: 0;
@@ -314,7 +328,7 @@ body.dark #moon{
 }
 .row{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     gap: 50px;
 }
@@ -563,11 +577,12 @@ footer{
     }
     .image, .image img{
         width: 320px;
-        height: 320px;
+        height: 360px;
     }
 }
 /* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
 @media only screen and (max-width: 900px) {
+    
     .nav-button{
         display: none;
     }
@@ -595,7 +610,9 @@ footer{
         display: flex;
         align-items: center;
         justify-content: center;
+        
     }
+
     .featured-box{
         flex-direction: column;
         justify-content: center;
@@ -616,11 +633,11 @@ footer{
         justify-content: center;
         min-height: 150px;
         width: 100%;
-        margin-top: 65px;
+        margin-top: 130px;
     }
     .image, .image img{
-        width: 150px;
-        height: 150px;
+        width: 240px;
+        height: 260px;
     }
     .row{
         display: flex;
