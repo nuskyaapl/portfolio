@@ -677,10 +677,10 @@ footer{
         min-height: 150px;
         width: 100%;
         padding-left: 20%;
-        margin-top: 20%;
+        margin-top: 10%;
     }
     .image{
-        border: 5px solid #fff;
+        border: 1px solid #fff;
     }
 
     .image, .image img{
