@@ -671,6 +671,23 @@ footer{
     .featured-name{
         font-size: 40px;
     }
+    .featured-image{
+        order: 1;
+        justify-content: center;
+        min-height: 150px;
+        width: 100%;
+        margin-top: 20%;
+    }
+    .image{
+        border: 5px solid #fff;
+    }
+
+    .image, .image img{
+        width: 240px;
+        height: 260px;
+        
+    }
+    
     
     .project-box{
         width: 100%;
