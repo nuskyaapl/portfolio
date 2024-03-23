@@ -676,11 +676,11 @@ footer{
         justify-content: center;
         min-height: 150px;
         width: 100%;
-        padding-left: 20%;
+        
         margin-top: 20%;
     }
     .image{
-        border: 3px solid #fff;
+        border: 5px solid #fff;
     }
 
     .image, .image img{
