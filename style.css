@@ -271,8 +271,9 @@ body.dark #moon{
     display: flex;
     justify-content: center; /* Adjusted to center the image horizontally */
     align-items: center; /* Adjusted to center the image vertically */
-    min-height: 50px;
+    min-height: 20%;
     width: 50%;
+    margin-top: 20%;
 }
 
 .image{
@@ -633,11 +634,16 @@ footer{
         justify-content: center;
         min-height: 150px;
         width: 100%;
-        margin-top: 130px;
+        margin-top: 20%;
     }
+    .image{
+        border: 5px solid #fff;
+    }
+
     .image, .image img{
         width: 240px;
         height: 260px;
+        
     }
     .row{
         display: flex;
@@ -665,6 +671,7 @@ footer{
     .featured-name{
         font-size: 40px;
     }
+    
     .project-box{
         width: 100%;
     }
